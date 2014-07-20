@@ -310,11 +310,11 @@ rb_insert(key As Variant) As TreeNode
 
     Set N = tree_insert(key)
     If (N Is Nothing) Then Exit Function
+    Set rb_insert = N
     
     ' node already existed and payload was overwritten by tree_insert()
     If (Not N.left Is Nothing) Or (Not N.right Is Nothing) Then Exit Function
 
-    Set rb_insert = N
     N.color = 1
     Do While True
         If (N Is root) Then Exit Do
