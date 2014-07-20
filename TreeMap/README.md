@@ -22,6 +22,7 @@ This class was written to work around limitations of the standard Collection cla
 ## TreeNode
 
 All members are public for simplicity.
+
 	- payload as Variant
 
 ## TreeInorderCursor
@@ -29,6 +30,7 @@ All members are public for simplicity.
 	- prev_node() As TreeNode
 
 Methods next_ a prev_ will return Nothing when the Map is exhausted.
+
 	- first() As TreeNode
 	- last() As TreeNode
 	- start(start_at As TreeNode)
