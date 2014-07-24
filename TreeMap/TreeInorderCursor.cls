@@ -14,6 +14,10 @@ Private cursor As TreeNode
 
 Public Function _
 next_node() As TreeNode
+    If (cursor is Nothing) Then
+        Set next_node = Nothing
+        Exit Function
+    EndIf
     If (Not cursor.right Is Nothing) Then
         Set cursor = leftmost(cursor.right)
     Else
@@ -32,6 +36,10 @@ End Function
 
 Public Function _
 prev_node() As TreeNode
+    If (cursor is Nothing) Then
+        Set prev_node = Nothing
+        Exit Function
+    EndIf
     If (Not cursor.left Is Nothing) Then
         Set cursor = rightmost(cursor.left)
     Else
